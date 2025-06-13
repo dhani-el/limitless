@@ -1,13 +1,18 @@
 import { Canvas } from '@react-three/fiber'
 import { XR, createXRStore, } from '@react-three/xr'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 const store = createXRStore();
 
 export default function App() {
-  const [red, setRed] = useState(false)
+  const [red, setRed] = useState(false);
+
+  useEffect(function(){
+    store.enterVR()
+  },[])
+
   return <>
-    <button onClick={() => store.enterVR()}>Enter AR</button>
+    <button onClick={() =>store.enterVR() }>Enter AR</button>
     <Canvas>
       <XR store={store}>
         <mesh pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1, -1]}>

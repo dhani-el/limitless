@@ -1,0 +1,2 @@
+calling the  enterStore() method on the createXRstore hook or function from the @react-three/xr' 
+file sets up the vr environment
