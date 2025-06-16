@@ -22,15 +22,14 @@ export default function App() {
 
 
 function Floor(){
-  return  <mesh rotateX={-Math.PI / 2} >
-              <planeGeometry  scale={[6,6]} />
+  return  <mesh  >
+              <planeGeometry rotateX={-Math.PI / 2}  scale={[6,6]} />
               <meshBasicMaterial color={"white"} />
           </mesh>
 }
 
 function Box(){
-  const [red, setRed] = useState(false);
-
+  const [red, setRed] = useState(false); 
   return <mesh  pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1, -1]}>
             <boxGeometry  scale={[1,1,1]} />
             <meshBasicMaterial color={red ? 'red' : 'blue'} />
