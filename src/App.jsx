@@ -31,7 +31,7 @@ function Floor(){
 
 function Box(){
   const [red, setRed] = useState(false); 
-  return <mesh  pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 0, 0]}>
+  return <mesh  pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1.8, 0]}>
             <boxGeometry  scale={[1,1,1]} />
             <meshBasicMaterial color={red ? 'red' : 'blue'} />
         </mesh>
