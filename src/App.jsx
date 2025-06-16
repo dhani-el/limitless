@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { XR, createXRStore, } from '@react-three/xr'
 import { useState,useEffect, useRef } from 'react'
+import { DoubleSide } from 'three';
 
 
 const store = createXRStore({
@@ -22,9 +23,9 @@ export default function App() {
 
 
 function Floor(){
-  return  <mesh rotation={[Math.PI / 2, 0, 0]}>
-            <planeGeometry args={[8, 8]} />
-            <meshBasicMaterial color="red" />
+  return  <mesh position={[0,0,0]} rotation={[Math.PI / 2, 0, 0]} scale={[6,6,6]} >
+            <planeGeometry  />
+            <meshBasicMaterial color="red" side={DoubleSide} />
           </mesh>
 }
 
