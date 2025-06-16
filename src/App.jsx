@@ -8,7 +8,6 @@ const store = createXRStore({
 });
 
 export default function App() {
-  const [red, setRed] = useState(false);
 
   return <>
     <button  onClick={() =>store.enterVR() }>Enter VR</button>
@@ -30,6 +29,8 @@ function Floor(){
 }
 
 function Box(){
+  const [red, setRed] = useState(false);
+
   return <mesh  pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1, -1]}>
             <boxGeometry  scale={[1,1,1]} />
             <meshBasicMaterial color={red ? 'red' : 'blue'} />
