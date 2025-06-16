@@ -22,9 +22,9 @@ export default function App() {
 
 
 function Floor(){
-  return  <mesh  >
-              <planeGeometry rotateX={-Math.PI / 2}  scale={[6,6]} />
-              <meshBasicMaterial color={"white"} />
+  return  <mesh rotation={[Math.PI / 2, 0, 0]}>
+            <planeGeometry args={[8, 8]} />
+            <meshBasicMaterial color="red" />
           </mesh>
 }
 
