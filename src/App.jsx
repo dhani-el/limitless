@@ -33,6 +33,6 @@ function Box(){
   const [red, setRed] = useState(false); 
   return <mesh scale={[0.2,0.2,0.2]} pointerEventsType={{ deny: 'grab' }} onClick={() => setRed(!red)} position={[0, 1.1, 1]}>
             <boxGeometry   />
-            <meshBasicMaterial color={red ? 'red' : 'blue'} />
+            <meshBasicMaterial color={red ? 'red' : 'green'} />
         </mesh>
 }
